@@ -14,7 +14,7 @@ job('NestJS Docker Setup') {
     steps {
         dockerBuildAndPublish {
             repositoryName('psreepathi/nestjs-image')
-            tag("${GIT_REVISION,length=9}")
+            tag('${GIT_REVISION,length=9}')
             registryCredentials('dockerhub')
             forcePull(false)
             forceTag(false)
